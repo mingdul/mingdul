@@ -20,11 +20,14 @@
 ---
  
 ## 🧭 About Me
+
+좋은 개발이란 선택의 이유와 책임 범위를 분명히 하는 일이라고 생각합니다.
+파이프라인의 병목을 찾고, 자동화할 부분과 사람이 검수해야 할 부분을 구분하며,
+팀이 신뢰할 수 있는 근거를 문서로 남기는 개발자로 성장하고 있습니다.
  
 ```
 📚 한국외국어대학교 언어인지과학과 / 컴퓨터공학과 복수전공
 🌱 크래프톤 정글 5기 수료 (2025.03 – 2025.07)
-🔍 언어의 구조를 분석하듯, 시스템의 구조를 분석합니다
 ⚡ 수치로 문제를 정의하고, 기술 선택 근거를 먼저 따집니다
 🎯 관심 분야: 고트래픽 백엔드 / MSA / 인프라 / 시스템 프로그래밍
 ```
@@ -33,9 +36,8 @@
  
 ## 🚀 Projects
  
-### 🛒 Courm — 이커머스 플랫폼 `2025.12 – 2026.02` `4인 팀`
- 
-> **Kafka + MSA + EKS 기반 고트래픽 주문 처리 시스템**  
+### 🛒 Courm — 이커머스 플랫폼 백앤드 개발
+
 > `100VU 기준 43,344건 처리 · 성공률 99.12% · 평균 응답 69ms · TPS 35`
  
 **핵심 설계 결정**
@@ -47,19 +49,7 @@
 | MSA 분산 트랜잭션 불일치 | Transactional Outbox + Polling | CDC/Debezium 대비 운영 리소스 절감 |
 | Kafka 메시지 순서 보장 + Hot Partition 방지 | orderId(UUID) Message Key | 동일 파티션 라우팅 + UUID 특성상 자연 분산 |
  
-<details>
-<summary><b>📐 인프라 상세 설계</b></summary>
-- **Kafka**: Brokers 3, Partition 3, Replication Factor 3, min.insync.replicas 2
-  - 파티션 산정: 목표 TPS(900) ÷ 파티션당 처리 TPS(300) = 3
-  - ack-mode=RECORD + Retry 3회 + DLQ(DeadLetterPublishingRecoverer)
-- **Kubernetes**: AWS EKS (ap-northeast-2, 멀티 AZ), Istio Gateway 트래픽 제어
-- **GitOps**: ArgoCD 배포 자동화, Jenkins Agent CI 파이프라인
-- **IaC**: Terraform (EKS, RDS, ElastiCache, ECR)
-- **관측성**: Prometheus + Grafana + Tempo + Loki + Fluent Bit
-- **동시성**: Redis TTL 15분 선점 → PaymentCompletedEvent 수신 후 DB 확정 차감
-  - Redis 장애 시 Fail-Fast → DB 무결성 보호
-</details>
-`Kafka` `Kubernetes` `AWS EKS` `MSA` `Redis` `PostgreSQL` `Terraform` `ArgoCD` `Istio`
+`Kafka` `Kubernetes` `AWS EKS` `MSA` `Redis` `PostgreSQL` 
  
 ---
  
@@ -82,17 +72,6 @@
 Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추출 → S3 저장 → 즉시 렌더링
  
 `React` `TypeScript` `Python` `Celery` `Amazon SQS` `S3` `WaveSurfer.js`
- 
----
- 
-### 🖥️ PintOS OS 구현 `2025.05 – 2025.06` `KAIST`
- 
-> **C언어로 OS 핵심 서브시스템 직접 구현**
- 
-가상 메모리 · 시스템 콜 · 스레드 · 동기화 구현  
-시스템 레벨 동작 원리를 코드로 검증
- 
-`C` `GDB` `Docker`
  
 ---
  
@@ -119,9 +98,7 @@ Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추�
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat-square&logo=argo&logoColor=white)
-![Istio](https://img.shields.io/badge/Istio-466BB0?style=flat-square&logo=istio&logoColor=white)
- 
+
 **Observability**
  
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
@@ -134,7 +111,7 @@ Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추�
  
 <div align="center">
 <img height="160" src="https://github-readme-stats.vercel.app/api?username=mingdul&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=your-mingdul&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mingdul&layout=compact&theme=tokyonight&hide_border=true"/>
 </div>
 <div align="center">
 [![GitHub Streak](https://streak-stats.demolab.com?user=mingdul&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
@@ -151,15 +128,6 @@ Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추�
  
 ---
 
-## Contact
-
-[![Velog](https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://velog.io/@mingdul)
-<br>
-[![Gmail](https://img.shields.io/badge/Gmail-dd4e41?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jmjang2122@gmail.com)
- 
-<div align="center">
-*"언어의 구조를 분석하듯, 시스템의 병목을 분석하고 구조로 해결합니다."*
- 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=80&section=footer"/>
 </div>
  
