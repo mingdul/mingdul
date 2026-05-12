@@ -1,73 +1,57 @@
+<div>
 
-<div align="center">
-<!-- Header Wave -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=120&section=header"/>
-<!-- Typing Animation -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=4FC3F7&center=true&vCenter=true&width=600&lines=%22Why%3F%22+%EB%A5%BC+%EC%A7%88%EB%AC%B8%ED%95%98%EB%8A%94+%EB%B0%B1%EC%97%94%EB%93%9C+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4;%EB%AC%B8%EC%A0%9C%EB%A5%BC+%EC%88%98%EC%B9%98%EB%A1%9C+%EC%A0%95%EC%9D%98%ED%95%98%EA%B3%A0+%EA%B5%AC%EC%A1%B0%EB%A1%9C+%ED%95%B4%EA%B2%B0%ED%95%A9%EB%8B%88%EB%8B%A4;%EC%96%B8%EC%96%B4%ED%95%99+%E2%86%92+CS+%E2%86%92+%EC%8B%9C%EC%8A%A4%ED%85%9C+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81" alt="Typing SVG" /></a>
- 
-<br/>
+**병목이 생기는 이유를 이해하고 더 나은 구조를 고민하는 개발자 장지민입니다.**
 
-[![Velog](https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://velog.io/@mingdul)
-[![Gmail](https://img.shields.io/badge/Gmail-dd4e41?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jmjang2122@gmail.com)
+개발을 할 때 문제가 생긴 이유를 정확히 이해하는 데 시간을 쏟는 편입니다. <br/>
+문제를 수치로 확인하고 여러 선택지의 트레이드오프를 비교하며,  <br/>
+팀이 납득할 수 있는 근거를 남기는 개발자로 성장하고 있습니다.
  
+
+ > 관심 분야: MSA / Kafka / MultiCore-Processing
+
+
 </div>
+
 ---
  
-## 🧭 About Me
+## Projects
+ 
+**Courm — 이커머스 플랫폼 | `2025.12 – 2026.02` | BE 개발**
 
-기능을 구현할 때 왜 이 방식이 필요한지와 어디까지 책임질 수 있는지를 먼저 고민합니다. <br/>
-파이프라인의 병목을 수치로 정의하고 팀이 신뢰할 수 있는 근거를 문서로 남기는 개발자로 성장하고 있습니다.
- 
-```
- 관심 분야: MSA / Kafka / MultiCore-Processing
-```
- 
----
- 
-## 🚀 Projects
- 
-### 🛒 Courm — 이커머스 플랫폼 백앤드 개발
+- PG사 장애가 전체 서비스로 전파되지 않도록 Monolithic 구조를 MSA로 전환했습니다.
+- 분산 트랜잭션 정합성을 보장하기 위해 Choreography Saga 패턴을 적용했습니다.
+- 개발 전 Application 설계 문서를 작성해 API 흐름, 이벤트 구조, 책임 범위를 팀원들과 공유했습니다.
+- Kafka를 전담해 이벤트 발행·구독 구조를 설계하고 구현했으며, EKS 환경에 배포했습니다.
 
-> `100VU 기준 43,344건 처리 · 성공률 99.12% · 평균 응답 69ms · TPS 35`
- 
-**핵심 설계 결정**
- 
-| 문제 | 선택 | 근거 |
-|------|------|------|
-| Monolithic → PG사 장애 시 서비스 전체 정지 | MSA + Choreography Saga | Orchestration의 단일 장애점 제거 |
-| 동시 주문 처리 시 DB Lock 경합 | Redis Lua Script 원자 연산 | 커넥션 고갈 없이 재고 조회·차감 단일 처리 |
-| MSA 분산 트랜잭션 불일치 | Transactional Outbox + Polling | CDC/Debezium 대비 운영 리소스 절감 |
-| Kafka 메시지 순서 보장 + Hot Partition 방지 | orderId(UUID) Message Key | 동일 파티션 라우팅 + UUID 특성상 자연 분산 |
- 
 `Kafka` `Kubernetes` `AWS EKS` `MSA` `Redis` `PostgreSQL` 
  
 ---
  
-### 🤖 AIOps 클라우드 장애 대응 시스템 `2025.09 – 2025.12` `3인 팀 · 팀장`
+**AIOps 클라우드 장애 대응 시스템 | `2025.09 – 2025.12` | 인프라 및 자동화 워크플로우 설계**
  
-> **LLM 기반 자동 장애 탐지 · 대응 파이프라인**
- 
-- Prometheus 임계치 기반 **선제 탐지** → LLM 분석 → Slack **Human-in-the-loop 승인**
-- N8N 채택: Airflow · Jenkins 비교 후 경량 실시간 파이프라인 요건에 최적 판단
-- 할루시네이션 리스크를 **운영자 승인 구조**로 제어
+- Prometheus 임계치 기반으로 장애 징후를 선제 탐지했습니다.
+- 탐지 이벤트를 LLM 분석으로 연결하고, Slack에서 운영자가 승인하도록 구성했습니다.
+- 자동 대응의 할루시네이션 리스크를 줄이기 위해 Human-in-the-loop 구조를 적용했습니다.
+- Airflow, Jenkins와 비교한 뒤 경량 실시간 파이프라인에 적합한 N8N을 채택했습니다.
+  
 `Kubernetes` `Prometheus` `Grafana` `N8N` `Llama3` `Gemini` `Slack`
  
 ---
  
-### 🎵 WaveFlow — 음악 협업 플랫폼 `2025.06 – 2025.07` `5인 팀`
+**WaveFlow — 음악 협업 플랫폼 | `2025.06 – 2025.07` | FE 개발**
  
-> **오디오 파형 렌더링 2,584ms → 379ms (85% 단축)**
+> 오디오 파형 렌더링 2,584ms → 379ms (85% 단축)
  
-프론트엔드 실시간 디코딩이 병목임을 파악 →  
-Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추출 → S3 저장 → 즉시 렌더링
- 
+- 프론트엔드에서 오디오를 실시간 디코딩하며 발생하는 렌더링 병목을 확인했습니다.
+- Python 서버가 Librosa와 Celery로 업로드 시점에 peaks 배열을 미리 추출하도록 변경했습니다.
+- 추출된 peaks 데이터를 S3에 저장하고, 프론트엔드는 이를 받아 즉시 렌더링하도록 구성했습니다.
+
 `React` `TypeScript` `Python` `Celery` `Amazon SQS` `S3` `WaveSurfer.js`
  
 ---
  
-## 🛠 Tech Stack
+## Tech Stack
  
-<div align="center">
 **Backend**
  
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
@@ -97,26 +81,20 @@ Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추�
 </div>
 ---
  
-## 📊 GitHub Stats
- 
-<div align="center">
-<img height="160" src="https://github-readme-stats.vercel.app/apiusername=mingdul&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mingdul&layout=compact&theme=tokyonight&hide_border=true"/>
-</div>
-<div align="center">
-[![GitHub Streak](https://streak-stats.demolab.com?user=mingdul&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
- 
-</div>
----
- 
-## 📚 Education
+## Education
  
 | 기간 | 내용 |
 |------|------|
-| 2025.03 – 2025.07 | **크래프톤 정글 5기** — CS 기초·시스템 프로그래밍·알고리즘 스터디 4개월 주도 |
+| 2025.03 – 2025.07 | **크래프톤 정글 8기** — CS 기초·시스템 프로그래밍·알고리즘 스터디 4개월 주도 |
 | 2022.03 – 2027.02 (예정) | **한국외국어대학교** 언어인지과학과 / 컴퓨터공학과 복수전공 |
  
 ---
+
+## More Info
+
+[![Velog](https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://velog.io/@mingdul)
+[![Gmail](https://img.shields.io/badge/Gmail-dd4e41?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jmjang2122@gmail.com)
+ 
 
 </div>
  
