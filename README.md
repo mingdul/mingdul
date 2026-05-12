@@ -6,12 +6,6 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1000&color=4FC3F7&center=true&vCenter=true&width=600&lines=%22Why%3F%22+%EB%A5%BC+%EC%A7%88%EB%AC%B8%ED%95%98%EB%8A%94+%EB%B0%B1%EC%97%94%EB%93%9C+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4;%EB%AC%B8%EC%A0%9C%EB%A5%BC+%EC%88%98%EC%B9%98%EB%A1%9C+%EC%A0%95%EC%9D%98%ED%95%98%EA%B3%A0+%EA%B5%AC%EC%A1%B0%EB%A1%9C+%ED%95%B4%EA%B2%B0%ED%95%A9%EB%8B%88%EB%8B%A4;%EC%96%B8%EC%96%B4%ED%95%99+%E2%86%92+CS+%E2%86%92+%EC%8B%9C%EC%8A%A4%ED%85%9C+%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81" alt="Typing SVG" /></a>
  
 <br/>
-# 장지민 · Jimin Jang
- 
-**`"왜?"라는 질문으로 시스템을 파고드는 백엔드 엔지니어`**
- 
- 
-<br/>
 
 [![Velog](https://img.shields.io/badge/Velog-20C997?style=for-the-badge&logo=velog&logoColor=white)](https://velog.io/@mingdul)
 [![Gmail](https://img.shields.io/badge/Gmail-dd4e41?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jmjang2122@gmail.com)
@@ -21,13 +15,11 @@
  
 ## 🧭 About Me
 
-좋은 개발이란 선택의 이유와 책임 범위를 분명히 하는 일이라고 생각합니다.
+좋은 개발이란 선택의 이유와 책임 범위를 분명히 하는 일이라고 생각합니다. <br/>
 파이프라인의 병목을 찾고, 자동화할 부분과 사람이 검수해야 할 부분을 구분하며,
 팀이 신뢰할 수 있는 근거를 문서로 남기는 개발자로 성장하고 있습니다.
  
 ```
-📚 한국외국어대학교 언어인지과학과 / 컴퓨터공학과 복수전공
-🌱 크래프톤 정글 5기 수료 (2025.03 – 2025.07)
 ⚡ 수치로 문제를 정의하고, 기술 선택 근거를 먼저 따집니다
 🎯 관심 분야: 고트래픽 백엔드 / MSA / 인프라 / 시스템 프로그래밍
 ```
@@ -110,7 +102,7 @@ Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추�
 ## 📊 GitHub Stats
  
 <div align="center">
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=mingdul&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
+<img height="160" src="https://github-readme-stats.vercel.app/apiusername=mingdul&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
 <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mingdul&layout=compact&theme=tokyonight&hide_border=true"/>
 </div>
 <div align="center">
@@ -128,6 +120,5 @@ Python 서버(Librosa + Celery)가 업로드 시점에 peaks 배열 미리 추�
  
 ---
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=80&section=footer"/>
 </div>
  
